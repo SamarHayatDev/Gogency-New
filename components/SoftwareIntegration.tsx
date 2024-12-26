@@ -1,0 +1,119 @@
+"use client";
+import React from "react";
+import {
+  Briefcase,
+  Plane,
+  Mail,
+  MessageCircle,
+  ShoppingBag,
+  Settings,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
+const integrations = [
+  {
+    name: "Sabre",
+    icon: <Briefcase />,
+    description:
+      "A complete travel solution to manage bookings, streamline workflows, and optimize your travel agency's operations.",
+  },
+  {
+    name: "Sabre",
+    icon: <Plane />,
+    description:
+      "A trusted partner connecting you to a global travel marketplace with advanced technology solutions.",
+  },
+  {
+    name: "Stripe",
+    icon: <ShoppingBag />,
+    description:
+      "A secure and scalable platform for payment processing, ideal for online transactions and commerce needs.",
+  },
+  {
+    name: "Gmail",
+    icon: <Mail />,
+    description:
+      "Simplify communication with Gmail's robust email platform, seamlessly integrated for business use.",
+  },
+  {
+    name: "WhatsApp",
+    icon: <MessageCircle />,
+    description:
+      "Enhance customer engagement and support with real-time messaging through WhatsApp integration.",
+  },
+  {
+    name: "Travelport",
+    icon: <Settings />,
+    description:
+      "Access a wide range of travel products and services through Travelport's modern commerce platform.",
+  },
+  {
+    name: "Amadeus",
+    icon: <Plane />,
+    description:
+      "Empower your travel business with innovative tools for booking and travel management solutions.",
+  },
+];
+
+const SoftwareIntegration = () => {
+  return (
+    <section className="container mx-auto max-w-screen-lg px-4 py-12">
+      <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-2">
+        Software Integrations
+      </h2>
+      <p className="max-w-[700px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
+        Enhance your business with cutting-edge software integrations designed
+        to improve efficiency, communication, and service quality for travel and
+        commerce industries.
+      </p>
+      <Carousel
+        className="w-full"
+        plugins={[
+          Autoplay({
+            delay: 3000, // Adjust delay as needed
+            stopOnInteraction: false, // Keep autoplay running even after user interaction
+          }),
+        ]}
+      >
+        <CarouselContent className="-ml-1 h-full">
+          {integrations.map((integration, index) => (
+            <CarouselItem
+              key={index}
+              className="pl-1 md:basis-1/2 lg:basis-1/3 xl:basis-1/4 self-stretch"
+            >
+              <div className="p-1 self-stretch">
+                <Card className="flex flex-col self-stretch">
+                  <CardContent className="flex flex-col items-center justify-center p-6 text-center flex-grow">
+                    <div className={`mb-4 p-2 rounded-full`}>
+                      {React.cloneElement(integration.icon, {
+                        className: `h-8 w-8 dark:text-gray-100 text-gray-900`,
+                      })}
+                    </div>
+                    <h3 className="text-lg font-semibold">
+                      {integration.name}
+                    </h3>
+                    {/* <p className="text-sm text-muted-foreground">
+                      {integration.description}
+                    </p> */}
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden md:block" />
+        <CarouselNext className="hidden md:block" />
+      </Carousel>
+    </section>
+  );
+};
+
+export default SoftwareIntegration;
