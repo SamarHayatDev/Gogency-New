@@ -77,7 +77,7 @@ const SoftwareIntegration = () => {
               className="pl-1 md:basis-1/2 lg:basis-1/3 xl:basis-1/4 self-stretch"
             >
               <div className="p-1 self-stretch">
-                <Card className="flex flex-col self-stretch">
+                <Card className="flex flex-col self-stretch bg-slate-800/10 dark:bg-gray-100/10">
                   <CardContent className="flex flex-col items-center justify-center p-6 text-center flex-grow">
                     <div className={`mb-4 p-2 rounded-full`}>
                       {/* Replacing icon with image */}

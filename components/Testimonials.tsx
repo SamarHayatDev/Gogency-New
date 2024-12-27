@@ -69,7 +69,7 @@ const Testimonials = () => {
               className="pl-1 lg:basis-1/2 xl:basis-1/3 self-stretch"
             >
               <div className="p-1 h-full">
-                <Card className="flex flex-col h-full">
+                <Card className="flex flex-col h-full bg-slate-800/10 dark:bg-gray-100/10">
                   <CardContent className="flex flex-col items-center justify-center p-6 text-center flex-grow">
                     <h3 className="text-lg font-semibold mb-2">
                       {testimonial.username}

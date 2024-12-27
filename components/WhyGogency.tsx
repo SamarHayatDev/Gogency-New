@@ -41,7 +41,7 @@ const WhyGogency = () => {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {WhyGogencyData.map((gogency, index) => (
-          <Card key={index}>
+          <Card key={index} className="bg-slate-800/10 dark:bg-gray-100/10">
             <CardHeader className="flex flex-col items-center justify-center">
               <div className="mb-4 p-2 rounded-full">
                 {React.cloneElement(gogency.icon, {
