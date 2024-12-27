@@ -1,13 +1,5 @@
 "use client";
 import React from "react";
-import {
-  Briefcase,
-  Plane,
-  Mail,
-  MessageCircle,
-  ShoppingBag,
-  Settings,
-} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -17,47 +9,43 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
+// Updated integrations array with image sources
 const integrations = [
   {
     name: "Sabre",
-    icon: <Briefcase />,
-    description:
-      "A complete travel solution to manage bookings, streamline workflows, and optimize your travel agency's operations.",
-  },
-  {
-    name: "Sabre",
-    icon: <Plane />,
+    imageSrc: "/apicons/Sabre.png", // Use actual image paths
     description:
       "A trusted partner connecting you to a global travel marketplace with advanced technology solutions.",
   },
   {
     name: "Stripe",
-    icon: <ShoppingBag />,
+    imageSrc: "/apicons/stripe.png",
     description:
       "A secure and scalable platform for payment processing, ideal for online transactions and commerce needs.",
   },
   {
     name: "Gmail",
-    icon: <Mail />,
+    imageSrc: "/apicons/gmail.png",
     description:
       "Simplify communication with Gmail's robust email platform, seamlessly integrated for business use.",
   },
   {
     name: "WhatsApp",
-    icon: <MessageCircle />,
+    imageSrc: "/apicons/whatsapp.png",
     description:
       "Enhance customer engagement and support with real-time messaging through WhatsApp integration.",
   },
   {
     name: "Travelport",
-    icon: <Settings />,
+    imageSrc: "/apicons/travelport.png",
     description:
       "Access a wide range of travel products and services through Travelport's modern commerce platform.",
   },
   {
     name: "Amadeus",
-    icon: <Plane />,
+    imageSrc: "/apicons/amadeus.png",
     description:
       "Empower your travel business with innovative tools for booking and travel management solutions.",
   },
@@ -69,10 +57,9 @@ const SoftwareIntegration = () => {
       <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-2">
         Software Integrations
       </h2>
-      <p className="max-w-[700px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
-        Enhance your business with cutting-edge software integrations designed
-        to improve efficiency, communication, and service quality for travel and
-        commerce industries.
+      <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
+        Gogency integrates with industry-leading software and tools to ensure
+        your business operates smoothly and efficiently.
       </p>
       <Carousel
         className="w-full"
@@ -93,9 +80,14 @@ const SoftwareIntegration = () => {
                 <Card className="flex flex-col self-stretch">
                   <CardContent className="flex flex-col items-center justify-center p-6 text-center flex-grow">
                     <div className={`mb-4 p-2 rounded-full`}>
-                      {React.cloneElement(integration.icon, {
-                        className: `h-8 w-8 dark:text-gray-100 text-gray-900`,
-                      })}
+                      {/* Replacing icon with image */}
+                      <Image
+                        src={integration.imageSrc}
+                        alt={integration.name}
+                        width={48}
+                        height={48}
+                        className="h-12 w-12 dark:text-gray-100 text-gray-900"
+                      />
                     </div>
                     <h3 className="text-lg font-semibold">
                       {integration.name}
@@ -109,8 +101,8 @@ const SoftwareIntegration = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:block" />
-        <CarouselNext className="hidden md:block" />
+        <CarouselPrevious className="hidden md:flex" />
+        <CarouselNext className="hidden md:flex" />
       </Carousel>
     </section>
   );

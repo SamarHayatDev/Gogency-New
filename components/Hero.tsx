@@ -10,12 +10,12 @@ const Hero = () => {
     <main className="container mx-auto max-w-screen-lg px-4 py-12">
       <div className="w-full">
         <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-          Gogency is a purpose-built tool for automation in traveling
-          management.
+          .Automate, Scale, Succeed
         </h1>
-        <p className="max-w-[700px] text-muted-foreground md:text-xl mt-4 my-2">
-          Streamline your travel agency: automate follow-ups, customize easily,
-          and optimize marketing and build brands on the go.
+        <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2">
+          Redefining Business Management across Industries.
+          <br /> Your all-in-one solution to automate operations, maximize
+          profits, and scale effortlessly
         </p>
         <div className="flex justify-start gap-4">
           <Button size="lg">
@@ -34,10 +34,10 @@ const Hero = () => {
           {/* Added rotation here */}
           <AspectRatio ratio={16 / 9}>
             <Image
-              src="/Images/hero.jpg"
+              src="/home/hero.webp"
               fill
               alt="Image"
-              className="rounded-md object-cover"
+              className="rounded-md object-contain"
             />
           </AspectRatio>
         </div>
