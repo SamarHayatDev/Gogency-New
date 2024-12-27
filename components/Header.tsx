@@ -19,6 +19,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -79,7 +80,15 @@ const Header = () => {
             </SheetContent>
           </Sheet>
         </div>
-        <h3 className="text-lg font-bold">Gogency</h3>
+        <Link href="/" className="flex items-center space-x-2 cursor-pointer">
+          <Image
+            src="/GogencyLogo.svg"
+            alt="Logo Gogency"
+            width={25}
+            height={25}
+          />{" "}
+          <h3 className="text-lg font-bold">Gogency</h3>
+        </Link>
 
         {/* Desktop Navigation Menu */}
         <NavigationMenu>
