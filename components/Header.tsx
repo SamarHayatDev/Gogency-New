@@ -5,7 +5,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { ModeToggle } from "./ModeToggler";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -28,6 +29,13 @@ const navLinks = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  // Use `useEffect` to set the current path after hydration
+  useEffect(() => {
+    setCurrentPath(pathname);
+  }, [pathname]);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -36,6 +44,7 @@ const Header = () => {
   return (
     <header className="flex items-center justify-between container mx-auto max-w-screen-lg p-4 pt-7">
       <div className="flex items-center space-x-4">
+        {/* Mobile Menu */}
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -53,7 +62,11 @@ const Header = () => {
                     <div key={path} className="w-full">
                       <Link href={path} passHref legacyBehavior>
                         <div
-                          className="hover:bg-slate-800/10 block dark:hover:bg-gray-100/10 px-3 py-2 rounded-sm"
+                          className={`block px-3 py-2 rounded-sm ${
+                            currentPath === path
+                              ? "bg-slate-800/10 dark:bg-gray-100/10"
+                              : "hover:bg-slate-800/10 dark:hover:bg-gray-100/10"
+                          }`}
                           onClick={handleClose}
                         >
                           {label}
@@ -68,13 +81,19 @@ const Header = () => {
         </div>
         <h3 className="text-lg font-bold">Gogency</h3>
 
-        {/* Secondary Navigation Menu */}
+        {/* Desktop Navigation Menu */}
         <NavigationMenu>
           <NavigationMenuList className="space-x-2 hidden md:flex">
             {navLinks.map(({ label, path }) => (
               <NavigationMenuItem key={path}>
                 <Link href={path} passHref legacyBehavior>
-                  <NavigationMenuLink className="hover:bg-slate-800/10 dark:hover:bg-gray-100/10 px-3 py-2 rounded-sm">
+                  <NavigationMenuLink
+                    className={`px-3 py-2 rounded-sm ${
+                      currentPath === path
+                        ? "bg-slate-800/10 dark:bg-gray-100/10"
+                        : "hover:bg-slate-800/10 dark:hover:bg-gray-100/10"
+                    }`}
+                  >
                     {label}
                   </NavigationMenuLink>
                 </Link>
@@ -84,7 +103,7 @@ const Header = () => {
         </NavigationMenu>
       </div>
 
-      {/* Right side controls */}
+      {/* Right Side Controls */}
       <div className="flex items-center space-x-4">
         <ModeToggle />
         <Button>Get Started</Button>
