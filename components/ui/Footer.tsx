@@ -5,12 +5,12 @@ import { MailPlus, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
-  const resourcesLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/pricing", label: "Pricing" },
-    { href: "/contact", label: "Contact" },
-  ];
+  // const resourcesLinks = [
+  //   { href: "/", label: "Home" },
+  //   { href: "/about", label: "About" },
+  //   { href: "/pricing", label: "Pricing" },
+  //   { href: "/contact", label: "Contact" },
+  // ];
 
   const solutionsLinks = [
     { href: "/features", label: "Features" },
