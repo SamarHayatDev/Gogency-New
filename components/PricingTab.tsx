@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
+import { CircleCheck } from "lucide-react"; // Import CircleCheck icon
 
 const plans = [
   {
@@ -135,9 +136,13 @@ const PricingTab = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg font-bold mb-2">£{plan.priceMonthly}</p>
-                  <ul className="mt-2 space-y-1 text-sm list-disc list-inside">
+                  <ul className="mt-2 space-y-1 text-sm">
                     {plan.featuresMonthly.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
+                      <li key={idx} className="flex items-center gap-2">
+                        <CircleCheck className="text-primary" />{" "}
+                        {/* Add CircleCheck icon */}
+                        {feature}
+                      </li>
                     ))}
                   </ul>
                 </CardContent>
@@ -161,9 +166,13 @@ const PricingTab = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg font-bold mb-2">£{plan.priceAnnual}</p>
-                  <ul className="mt-2 space-y-1 text-sm list-disc list-inside">
+                  <ul className="mt-2 space-y-1 text-sm">
                     {plan.featuresAnnual.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
+                      <li key={idx} className="flex items-center gap-2">
+                        <CircleCheck className="text-primary" />{" "}
+                        {/* Add CircleCheck icon */}
+                        {feature}
+                      </li>
                     ))}
                   </ul>
                 </CardContent>

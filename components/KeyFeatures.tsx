@@ -22,7 +22,7 @@ const KeyFeatures = () => {
       {/* First Parent Grid - First 2 Cards */}
       <div className="w-full grid md:grid-cols-2 gap-4 mb-4">
         <div className="flex flex-col">
-          <Card className="flex-1">
+          <Card className="flex-1 bg-slate-800/10 dark:bg-gray-100/10">
             <CardHeader>
               <AspectRatio ratio={16 / 9}>
                 <Image
@@ -48,7 +48,7 @@ const KeyFeatures = () => {
         </div>
 
         <div className="flex flex-col">
-          <Card className="flex-1">
+          <Card className="flex-1 bg-slate-800/10 dark:bg-gray-100/10">
             <CardHeader>
               <AspectRatio ratio={16 / 9}>
                 <Image
@@ -77,7 +77,7 @@ const KeyFeatures = () => {
       {/* Second Parent Grid - Last 3 Cards */}
       <div className="w-full grid md:grid-cols-3 gap-4">
         <div className="flex flex-col">
-          <Card className="flex-1">
+          <Card className="flex-1 bg-slate-800/10 dark:bg-gray-100/10">
             <CardHeader>
               <AspectRatio ratio={16 / 9}>
                 <Image
@@ -103,7 +103,7 @@ const KeyFeatures = () => {
         </div>
 
         <div className="flex flex-col">
-          <Card className="flex-1">
+          <Card className="flex-1 bg-slate-800/10 dark:bg-gray-100/10">
             <CardHeader>
               <AspectRatio ratio={16 / 9}>
                 <Image
@@ -129,7 +129,7 @@ const KeyFeatures = () => {
         </div>
 
         <div className="flex flex-col">
-          <Card className="flex-1">
+          <Card className="flex-1 bg-slate-800/10 dark:bg-gray-100/10">
             <CardHeader>
               <AspectRatio ratio={16 / 9}>
                 <Image
