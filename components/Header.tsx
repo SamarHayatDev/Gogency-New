@@ -83,14 +83,16 @@ const Header = () => {
             </SheetContent>
           </Sheet>
         </div>
-        <Link href="/" className="flex items-center space-x-2 cursor-pointer">
+        <Link href="/" className="flex items-center space-x-2 cursor-pointer ">
           <Image
             src="/GogencyLogo.svg"
             alt="Logo Gogency"
             width={25}
             height={25}
           />
-          <h3 className="text-lg font-bold">Gogency</h3>
+          <div className="h-full">
+            <span className="text-lg h-full font-bold">Gogency</span>
+          </div>
         </Link>
 
         {/* Desktop Navigation Menu */}
