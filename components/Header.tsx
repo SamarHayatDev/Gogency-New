@@ -1,4 +1,5 @@
 "use client";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -30,12 +31,14 @@ const navLinks = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState<string | null>(null);
+  const [currentPath, setCurrentPath] = useState<string>(""); // Use empty string as default
   const pathname = usePathname();
 
   // Use `useEffect` to set the current path after hydration
   useEffect(() => {
-    setCurrentPath(pathname);
+    if (pathname) {
+      setCurrentPath(pathname);
+    }
   }, [pathname]);
 
   const handleClose = () => {
@@ -86,7 +89,7 @@ const Header = () => {
             alt="Logo Gogency"
             width={25}
             height={25}
-          />{" "}
+          />
           <h3 className="text-lg font-bold">Gogency</h3>
         </Link>
 
