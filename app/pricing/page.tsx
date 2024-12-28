@@ -1,7 +1,16 @@
+import Faqs from "@/components/Faqs";
+import PricingTab from "@/components/PricingTab";
+import Testimonials from "@/components/Testimonials";
 import React from "react";
 
 const Pricing = () => {
-  return <div>Pricing</div>;
+  return (
+    <>
+      <PricingTab />
+      <Testimonials />
+      <Faqs />
+    </>
+  );
 };
 
 export default Pricing;
