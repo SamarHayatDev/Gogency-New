@@ -7,7 +7,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Hero = () => {
   return (
-    <main className="container mx-auto max-w-screen-lg px-4 py-12">
+    <main>
       <div className="w-full">
         <h1>.Automate, Scale, Succeed</h1>
         <p className="paraheading">
