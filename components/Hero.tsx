@@ -9,10 +9,8 @@ const Hero = () => {
   return (
     <main className="container mx-auto max-w-screen-lg px-4 py-12">
       <div className="w-full">
-        <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-          .Automate, Scale, Succeed
-        </h1>
-        <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2">
+        <h1>.Automate, Scale, Succeed</h1>
+        <p className="paraheading">
           Redefining Business Management across Industries.
           <br /> Your all-in-one solution to automate operations, maximize
           profits, and scale effortlessly
@@ -22,9 +20,9 @@ const Hero = () => {
             Get Started
             <ChevronRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button variant="outline" size="lg">
+          {/* <Button variant="outline" size="lg">
             Learn More
-          </Button>
+          </Button> */}
         </div>
       </div>
       <div className="mt-8">

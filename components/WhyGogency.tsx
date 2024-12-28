@@ -32,13 +32,9 @@ const WhyGogencyData = [
 
 const WhyGogency = () => {
   return (
-    <section className="container mx-auto max-w-screen-lg px-4 py-12">
-      <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-2">
-        Why Gogency?
-      </h2>
-      <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
-        Fully Automated Business Management
-      </p>
+    <section>
+      <h2>Why Gogency?</h2>
+      <p className="paraheading">Fully Automated Business Management</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {WhyGogencyData.map((gogency, index) => (
           <Card key={index} className="bg-slate-800/10 dark:bg-gray-100/10">

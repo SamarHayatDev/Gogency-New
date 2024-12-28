@@ -111,21 +111,19 @@ const plans = [
 
 const PricingTab = () => {
   return (
-    <section className="container mx-auto max-w-screen-lg px-4 py-12">
-      <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-2">
-        Explore our Solutions
-      </h2>
-      <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
+    <section>
+      <h1>Explore our Solutions</h1>
+      <p className="paraheading">
         Work management platform teams use to stay focused on the goals,
         projects, and daily tasks that grow business.
       </p>
       <Tabs defaultValue="monthly" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
+        <TabsList className="grid w-full grid-cols-2 mb-4">
           <TabsTrigger value="monthly">Monthly</TabsTrigger>
           <TabsTrigger value="annual">Annual</TabsTrigger>
         </TabsList>
         <TabsContent value="monthly">
-          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {plans.map((plan) => (
               <Card
                 key={plan.name}
@@ -151,7 +149,7 @@ const PricingTab = () => {
           </div>
         </TabsContent>
         <TabsContent value="annual">
-          <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {plans.map((plan) => (
               <Card
                 key={plan.name}

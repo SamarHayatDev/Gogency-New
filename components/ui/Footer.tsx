@@ -22,27 +22,29 @@ const Footer = () => {
     <footer>
       <div className="container mx-auto max-w-screen-lg px-4 py-12">
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 border-t border-muted-foreground py-8">
-          <div className="">
+          <div>
             <Link
               href="/"
-              className="flex items-center space-x-2 mb-4 cursor-pointer"
+              className="flex justify-start items-center space-x-2 mb-4 cursor-pointer"
             >
               <Image
                 src="/GogencyLogo.svg"
                 alt="Logo Gogency"
-                width={25}
-                height={25}
-              />{" "}
-              <h3 className="text-lg font-bold">Gogency</h3>
+                width={27}
+                height={27}
+              />
+              <div className="h-full  flex items-center justify-center">
+                <span className="text-lg font-bold h-full ">Gogency</span>
+              </div>
             </Link>
+
             <p className="mb-4 text-muted-foreground">
               Work management platform teams use to stay.
             </p>
           </div>
 
-          {/* Column 4: Company Info */}
           <div>
-            <h3 className="mb-4">Solutions</h3>
+            <h6 className="mb-4">Solutions</h6>
             <div>
               <div className="flex flex-col space-y-2 text-muted-foreground items-start justify-start">
                 {solutionsLinks.map((link, index) => (
@@ -53,9 +55,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {/* Column 4: Company Info */}
+
           <div>
-            <h3 className="mb-4">Solutions</h3>
+            <h6 className="mb-4">Solutions</h6>
             <div>
               <div className="flex flex-col space-y-2 text-muted-foreground items-start justify-start">
                 {solutionsLinks.map((link, index) => (
@@ -66,9 +68,9 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {/* Column 4: Company Info */}
+
           <div>
-            <h3 className="mb-4">Company Info</h3>
+            <h6 className="mb-4">Company Info</h6>
             <div className="flex flex-col space-y-2 text-muted-foreground items-start justify-start">
               <div className="flex items-center justify-start gap-2 text-muted-foreground ">
                 <div className="bg-primary text-primary-foreground p-2 rounded-full">

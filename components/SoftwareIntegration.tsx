@@ -53,11 +53,9 @@ const integrations = [
 
 const SoftwareIntegration = () => {
   return (
-    <section className="container mx-auto max-w-screen-lg px-4 py-12">
-      <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-2">
-        Software Integrations
-      </h2>
-      <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
+    <section>
+      <h2>Software Integrations</h2>
+      <p className="paraheading">
         Gogency integrates with industry-leading software and tools to ensure
         your business operates smoothly and efficiently.
       </p>
@@ -65,8 +63,8 @@ const SoftwareIntegration = () => {
         className="w-full"
         plugins={[
           Autoplay({
-            delay: 3000, // Adjust delay as needed
-            stopOnInteraction: false, // Keep autoplay running even after user interaction
+            delay: 3000,
+            stopOnInteraction: false,
           }),
         ]}
       >
@@ -74,7 +72,7 @@ const SoftwareIntegration = () => {
           {integrations.map((integration, index) => (
             <CarouselItem
               key={index}
-              className="pl-1 md:basis-1/2 lg:basis-1/3 xl:basis-1/4 self-stretch"
+              className="pl-1 md:basis-1/2 gap-4 lg:basis-1/3 xl:basis-1/4 self-stretch"
             >
               <div className="p-1 self-stretch">
                 <Card className="flex flex-col self-stretch bg-slate-800/10 dark:bg-gray-100/10">
@@ -92,9 +90,6 @@ const SoftwareIntegration = () => {
                     <h3 className="text-lg font-semibold">
                       {integration.name}
                     </h3>
-                    {/* <p className="text-sm text-muted-foreground">
-                      {integration.description}
-                    </p> */}
                   </CardContent>
                 </Card>
               </div>

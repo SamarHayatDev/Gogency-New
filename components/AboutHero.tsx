@@ -5,15 +5,13 @@ const AboutHero = () => {
   return (
     <main className="container mx-auto max-w-screen-lg px-4 py-12">
       <div className="w-full">
-        <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-          We are small but grand ambitious
-        </h1>
-        <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2">
+        <h1>We are small but grand ambitious</h1>
+        <p className="paraheading">
           Work management platform teams use to stay focused on the goals,
           projects, and daily tasks that grow business
         </p>
       </div>
-      <div className="mt-4">
+      <div>
         <div className="w-full">
           <Image
             src="/home/XECUTORS_BUILDING-scaled.webp"

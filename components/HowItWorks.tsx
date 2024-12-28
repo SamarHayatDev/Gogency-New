@@ -3,13 +3,11 @@ import { AspectRatio } from "./ui/aspect-ratio";
 import Image from "next/image";
 import { Card } from "./ui/card";
 
-const BentoGrid = () => {
+const HowItWorks = () => {
   return (
-    <section className="container mx-auto max-w-screen-lg px-4 py-12">
-      <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-2">
-        How it Works
-      </h2>
-      <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
+    <section>
+      <h2>How it Works</h2>
+      <p className="paraheading">
         Explore our versatile inquiry dashboard: effortlessly track, manage, and
         respond to customer requests.
       </p>
@@ -18,10 +16,10 @@ const BentoGrid = () => {
         <Card className="col-span-1 row-span-1 overflow-hidden bg-slate-800/10 dark:bg-gray-100/10">
           <AspectRatio ratio={4 / 4}>
             <Image
-              src="/Images/hero.jpg"
+              src="/dummy.jpg"
               alt="Image"
               fill
-              className="rounded-md object-contain"
+              className="rounded-md object-cover"
             />
           </AspectRatio>
         </Card>
@@ -29,10 +27,10 @@ const BentoGrid = () => {
         <Card className="col-span-1 row-span-1 overflow-hidden bg-slate-800/10 dark:bg-gray-100/10">
           <AspectRatio ratio={4 / 4}>
             <Image
-              src="/Images/hero.jpg"
+              src="/dummy.jpg"
               alt="Image"
               fill
-              className="rounded-md object-contain"
+              className="rounded-md object-cover"
             />
           </AspectRatio>
         </Card>
@@ -40,10 +38,10 @@ const BentoGrid = () => {
         <Card className="md:col-span-2 md:row-span-2 overflow-hidden bg-slate-800/10 dark:bg-gray-100/10">
           <AspectRatio ratio={4 / 4}>
             <Image
-              src="/Images/hero.jpg"
+              src="/dummy.jpg"
               alt="Image"
               fill
-              className="rounded-md object-contain"
+              className="rounded-md object-cover"
             />
           </AspectRatio>
         </Card>
@@ -51,10 +49,10 @@ const BentoGrid = () => {
         <Card className="md:col-span-2 md:row-span-2 overflow-hidden bg-slate-800/10 dark:bg-gray-100/10">
           <AspectRatio ratio={8 / 8}>
             <Image
-              src="/Images/hero.jpg"
+              src="/dummy.jpg"
               alt="Image"
               fill
-              className="rounded-md object-contain"
+              className="rounded-md object-cover"
             />
           </AspectRatio>
         </Card>
@@ -62,10 +60,10 @@ const BentoGrid = () => {
         <Card className="col-span-1 row-span-1 overflow-hidden bg-slate-800/10 dark:bg-gray-100/10">
           <AspectRatio ratio={4 / 4}>
             <Image
-              src="/Images/hero.jpg"
+              src="/dummy.jpg"
               alt="Image"
               fill
-              className="rounded-md object-contain"
+              className="rounded-md object-cover"
             />
           </AspectRatio>
         </Card>
@@ -73,10 +71,10 @@ const BentoGrid = () => {
         <Card className="col-span-1 row-span-1 overflow-hidden bg-slate-800/10 dark:bg-gray-100/10">
           <AspectRatio ratio={4 / 4}>
             <Image
-              src="/Images/hero.jpg"
+              src="/dummy.jpg"
               alt="Image"
               fill
-              className="rounded-md object-contain"
+              className="rounded-md object-cover"
             />
           </AspectRatio>
         </Card>
@@ -85,4 +83,4 @@ const BentoGrid = () => {
   );
 };
 
-export default BentoGrid;
+export default HowItWorks;

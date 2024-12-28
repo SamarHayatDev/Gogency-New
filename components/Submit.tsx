@@ -38,11 +38,9 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="container mx-auto max-w-screen-lg px-4 py-12">
-      <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl mb-2">
-        Get in Touch with Us
-      </h2>
-      <p className="max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2 mb-4">
+    <section>
+      <h2>Get in Touch with Us</h2>
+      <p className="paraheading">
         We are here to assist you with any inquiries. Please fill out the form
         below.
       </p>
