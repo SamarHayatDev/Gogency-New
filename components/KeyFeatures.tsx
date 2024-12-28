@@ -20,7 +20,7 @@ const KeyFeatures = () => {
       </p>
 
       {/* First Parent Grid - First 2 Cards */}
-      <div className="w-full grid grid-cols-2 gap-4 mb-4">
+      <div className="w-full grid md:grid-cols-2 gap-4 mb-4">
         <div className="flex flex-col">
           <Card className="flex-1">
             <CardHeader>
@@ -75,7 +75,7 @@ const KeyFeatures = () => {
       </div>
 
       {/* Second Parent Grid - Last 3 Cards */}
-      <div className="w-full grid grid-cols-3 gap-4">
+      <div className="w-full grid md:grid-cols-3 gap-4">
         <div className="flex flex-col">
           <Card className="flex-1">
             <CardHeader>

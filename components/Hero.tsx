@@ -15,7 +15,7 @@ const Hero = () => {
           <br /> Your all-in-one solution to automate operations, maximize
           profits, and scale effortlessly
         </p>
-        <div className="flex justify-start gap-4">
+        <div className="flex justify-start gap-4 mt-4">
           <Button size="lg">
             Get Started
             <ChevronRight className="ml-2 h-4 w-4" />
@@ -30,12 +30,12 @@ const Hero = () => {
         <div className="w-full ">
           {" "}
           {/* Added rotation here */}
-          <AspectRatio ratio={16 / 9}>
+          <AspectRatio ratio={16 / 8}>
             <Image
-              src="/home/hero.webp"
+              src="/dummy.jpg"
               fill
               alt="Image"
-              className="rounded-md object-contain"
+              className="rounded-md object-cover"
             />
           </AspectRatio>
         </div>
