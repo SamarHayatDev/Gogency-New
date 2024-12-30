@@ -75,7 +75,7 @@ const Faqs = () => {
         {faqData.map((faq, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
             <AccordionTrigger className="text-muted-foreground">
-              {faq.question}
+              <p className="paraheading-faq">{faq.question}</p>
             </AccordionTrigger>
             <AccordionContent className="text-muted-foreground">
               {faq.answer}

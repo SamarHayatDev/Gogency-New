@@ -146,6 +146,9 @@ h6 {
   @apply max-w-[800px] text-muted-foreground md:text-xl mt-4 my-2;
 }
 
+.paraheading-faq {
+  @apply max-w-[800px] text-muted-foreground md:text-sm tracking-normal mt-4 my-2;
+}
 section {
   @apply container mx-auto max-w-screen-lg px-4 py-12;
 }
