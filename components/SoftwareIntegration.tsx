@@ -13,44 +13,44 @@ import Image from "next/image";
 import { AspectRatio } from "./ui/aspect-ratio";
 
 // Updated integrations array with image sources
-const integrations = [
-  {
-    name: "Sabre",
-    imageSrc: "/apicons/Sabre.png", // Use actual image paths
-    description:
-      "A trusted partner connecting you to a global travel marketplace with advanced technology solutions.",
-  },
-  {
-    name: "Stripe",
-    imageSrc: "/apicons/stripe.png",
-    description:
-      "A secure and scalable platform for payment processing, ideal for online transactions and commerce needs.",
-  },
-  {
-    name: "Gmail",
-    imageSrc: "/apicons/gmail.png",
-    description:
-      "Simplify communication with Gmail's robust email platform, seamlessly integrated for business use.",
-  },
-  {
-    name: "WhatsApp",
-    imageSrc: "/apicons/whatsapp.png",
-    description:
-      "Enhance customer engagement and support with real-time messaging through WhatsApp integration.",
-  },
-  {
-    name: "Travelport",
-    imageSrc: "/apicons/travelport.png",
-    description:
-      "Access a wide range of travel products and services through Travelport's modern commerce platform.",
-  },
-  {
-    name: "Amadeus",
-    imageSrc: "/apicons/amadeus.png",
-    description:
-      "Empower your travel business with innovative tools for booking and travel management solutions.",
-  },
-];
+// const integrations = [
+//   {
+//     name: "Sabre",
+//     imageSrc: "/apicons/Sabre.png", // Use actual image paths
+//     description:
+//       "A trusted partner connecting you to a global travel marketplace with advanced technology solutions.",
+//   },
+//   {
+//     name: "Stripe",
+//     imageSrc: "/apicons/stripe.png",
+//     description:
+//       "A secure and scalable platform for payment processing, ideal for online transactions and commerce needs.",
+//   },
+//   {
+//     name: "Gmail",
+//     imageSrc: "/apicons/gmail.png",
+//     description:
+//       "Simplify communication with Gmail's robust email platform, seamlessly integrated for business use.",
+//   },
+//   {
+//     name: "WhatsApp",
+//     imageSrc: "/apicons/whatsapp.png",
+//     description:
+//       "Enhance customer engagement and support with real-time messaging through WhatsApp integration.",
+//   },
+//   {
+//     name: "Travelport",
+//     imageSrc: "/apicons/travelport.png",
+//     description:
+//       "Access a wide range of travel products and services through Travelport's modern commerce platform.",
+//   },
+//   {
+//     name: "Amadeus",
+//     imageSrc: "/apicons/amadeus.png",
+//     description:
+//       "Empower your travel business with innovative tools for booking and travel management solutions.",
+//   },
+// ];
 
 const SoftwareIntegration = () => {
   return (
