@@ -1,15 +1,16 @@
-"use client";
+// "use client";
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+// import { Card, CardContent } from "@/components/ui/card";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
+// import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
+import { AspectRatio } from "./ui/aspect-ratio";
 
 // Updated integrations array with image sources
 const integrations = [
@@ -59,7 +60,17 @@ const SoftwareIntegration = () => {
         Gogency integrates with industry-leading software and tools to ensure
         your business operates smoothly and efficiently.
       </p>
-      <Carousel
+      <div className="">
+        <AspectRatio ratio={16 / 10}>
+          <Image
+            src="/gogency_image.png"
+            alt="Image"
+            fill
+            className="rounded-md object-contain"
+          />
+        </AspectRatio>
+      </div>
+      {/* <Carousel
         className="w-full"
         plugins={[
           Autoplay({
@@ -78,7 +89,6 @@ const SoftwareIntegration = () => {
                 <Card className="flex flex-col self-stretch bg-slate-800/10 dark:bg-gray-100/10">
                   <CardContent className="flex flex-col items-center justify-center p-6 text-center flex-grow">
                     <div className={`mb-4 p-2 rounded-full`}>
-                      {/* Replacing icon with image */}
                       <Image
                         src={integration.imageSrc}
                         alt={integration.name}
@@ -98,7 +108,7 @@ const SoftwareIntegration = () => {
         </CarouselContent>
         <CarouselPrevious className="hidden md:flex" />
         <CarouselNext className="hidden md:flex" />
-      </Carousel>
+      </Carousel> */}
     </section>
   );
 };

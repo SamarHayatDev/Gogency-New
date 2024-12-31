@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gogency",
+  title: "Gogency - .Automate, Scale, Succeed",
   description: ".Automate, Scale, Succeed",
 };
 

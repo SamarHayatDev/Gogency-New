@@ -10,13 +10,13 @@ const InquiryManagment = () => {
         Explore our versatile inquiry dashboard: effortlessly track, manage, and
         respond to customer requests.
       </p>
-      <div>
-        <AspectRatio ratio={16 / 7}>
+      <div className="">
+        <AspectRatio ratio={16 / 10}>
           <Image
-            src="/dummy.jpg"
+            src="/gogency_image.png"
             alt="Image"
             fill
-            className="rounded-md object-cover"
+            className="rounded-md object-contain"
           />
         </AspectRatio>
       </div>

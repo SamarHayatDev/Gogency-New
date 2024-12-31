@@ -5,12 +5,12 @@ import { MailPlus, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
-  // const resourcesLinks = [
-  //   { href: "/", label: "Home" },
-  //   { href: "/about", label: "About" },
-  //   { href: "/pricing", label: "Pricing" },
-  //   { href: "/contact", label: "Contact" },
-  // ];
+  const resourcesLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   const solutionsLinks = [
     { href: "/features", label: "Features" },
@@ -43,10 +43,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <h6 className="mb-4">Solutions</h6>
+          <h6 className="mb-4">Quick Links</h6>
           <div>
             <div className="flex flex-col space-y-2 text-muted-foreground items-start justify-start">
-              {solutionsLinks.map((link, index) => (
+              {resourcesLinks.map((link, index) => (
                 <div key={index}>
                   <Link href={link.href}>{link.label}</Link>
                 </div>
